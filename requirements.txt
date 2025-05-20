@@ -1,2 +1,2 @@
-scikit-learn==0.24.2
-streamlit-aggrid==0.2.2.post2
+scikit-learn
+streamlit-aggrid
