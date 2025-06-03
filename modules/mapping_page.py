@@ -66,6 +66,7 @@ def show():
         st.session_state.df = new_df
         st.session_state.derivation_generated = True
         st.success("✅ Derivation column generated.")
-        st.experimental_rerun()
+        #st.experimental_rerun()
+        st.rerun()
 
     st.download_button("📥 Export as CSV", data=st.session_state.df.to_csv(index=False).encode("utf-8"), file_name="matched_result.csv")
