@@ -15,7 +15,7 @@ def show():
     if "original_labels" not in st.session_state:
         st.session_state.original_labels = df["Main Label"].copy()
 
-    df["label_changed"] = df["Main Label"] != st.session_state.original_labels
+    df["label_changed"] = df["Main Label"].values != st.session_state.original_labels.values
 
     # 仅对修改的行重新匹配
     for i, changed in enumerate(df["label_changed"]):
